@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Miage calculator</title>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body ng-app='app'>
+        <div class="ml-3 mr-3 alert alert-dark" role="alert">
+             MIAGE Calculator
+        </div>
+        <div clas="container">
+            <div class="col" ng-controller='monController'>
+                <form>
+                    <div class="row form-group">
+                        <label class="col-12  col-form-label">*Op 1:</label>
+                        <div class="col">
+                            <input   type="number" class="form-control" id="op1" name="op1" >
+                        </div>
+                        
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-12 col-form-label">*Op 2:</label>
+                        <div class="col">
+                            <input  type="number" class="form-control" id="op2" name="op2">
+                        </div>
+                    </div>
+                    
+                    <div class="row form-group" >
+                        <label class="col-12 col-form-label">Resultat</label>
+                        <div class="col" >
+                            <input  type="number" class="form-control" id="Resultat"  Disabled >
+                        </div>
+                 
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button  ng-click="clickMe()" type="button" class="btn btn-primary btn-12 btn-block">+</button>
+                            
+                        </div>
+                        
+                        <script>
+                       
+                             var li=angular.module('app',[]);
+                             li.controller('monController', function($scope){
+                                 message=" ";
+                                 clickMe(){
+                                     message="Salut";
+                                 }
+                             })
+                        </script>
+                        <div class="col">
+                            <button  type="button" class="btn btn-primary btn-12 btn-block">*</button>
+                        </div>
+                    </div>
+                   
+                     <div  class="row">
+                        <button type="button" class="btn btn-light"></button>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="btn btn-primary btn-12 btn-block">-</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-primary btn-12 btn-block">/</button>
+                        </div>
+                    </div>
+                    <div  class="row">
+                        <button type="button" class="btn btn-light"></button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="ml-3 mr-3 btn btn-success btn-lg btn-block">Mémoriser</button>
+                        <button type="button" class="ml-3 mr-3  btn btn-success btn-lg btn-block">Charger en mémoire</button>
+                    </div>
+                    <div  class="row">
+                        <button type="button" class="btn btn-light"></button>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-12 col-form-label">En mémoire</label>
+                        <div class="col">
+                            <input type="number" class="form-control" id="memoire" disabled>
+                        </div>
+                    </div>
+                    <div class="row from-group" >
+                        <button type="button" class="ml-3 mr-3 btn btn-info btn-lg btn-block form-control">Mes 10 dernières opérations</button>
+                    </div>
+                    <div  class="row">
+                        <button type="button" class="btn btn-light"></button>
+                    </div>
+                     <div class="row from-group" >
+                        <button type="button" class="ml-3 mr-3  btn btn-secondary btn-lg btn-block form-control">Votre historique est vide !</button>
+                    </div>
+                    
+                </form>
+            </div>
+           
+        </div>
+    </body>
+</html>
