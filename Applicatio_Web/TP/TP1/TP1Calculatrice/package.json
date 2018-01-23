@@ -1,0 +1,8 @@
+{
+    "name": "TP1Calculatrice",
+    "version": "1.0.0",
+    "keywords": ["util", "functional", "server", "client", "browser"],
+    "author": "diawara",
+    "contributors": [],
+    "dependencies": {}
+}
