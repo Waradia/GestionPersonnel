@@ -22,7 +22,7 @@ and open the template in the editor.
         </div>
         <div class="container">
             <div class="col">
-                <form ng-controller="monController">
+                <form ng-controller="monController1">
                     <div class="row form-group">
                         <label class="col-12  col-form-label">*Op 1:</label>
                         <div class="col">
@@ -52,36 +52,36 @@ and open the template in the editor.
                       <button ng-click="diff()" type="button" class="ml-3 mr-3 btn btn-primary btn-12 btn-block">-</button>
                       <button ng-click="div()" type="button" class="ml-3 mr-3 btn btn-primary btn-12 btn-block">/</button>
                      
-                    
                     </div>
-                   
-                    <div  class="row">
-                        <button type="button" class="btn btn-light"></button>
-                    </div>
+                            
+         
+                 
                     <div class="row">
                         <button ng-click="memoriser()" type="button" class="ml-3 mr-3 btn btn-success btn-lg btn-block">Mémoriser</button>
                         <button ng-click="recharger()" type="button" class="ml-3 mr-3  btn btn-success btn-lg btn-block">Charger en mémoire</button>
                     </div>
-                    <div  class="row">
-                        <button type="button" class="btn btn-light"></button>
-                    </div>
+                   
                     <div class="row form-group">
                         <label class="col-12 col-form-label">En mémoire</label>
                         <div class="col">
                             <input ng-model="memoire" type="number" class="form-control" id="memoire" disabled>
                         </div>
                     </div>
-                    <div class="row from-group" >
-                        <button ng-click="ten()" type="button" class="ml-3 mr-3 btn btn-info btn-lg btn-block form-control">Mes 10 dernières opérations</button>
-                    </div>
-                    <div  class="row">
-                        <button type="button" class="btn btn-light"></button>
-                    </div>
-                     <div class="row from-group" >
-                        <button ng-repeat="p in val" type="button" class="ml-3 mr-3  btn btn-secondary btn-lg btn-block form-control">Votre historique est vide !</button>
-                    </div>
-                    
+                 </form>  
+                <form ng-controller="monControlleur2">
+                    <div   class="ml-3 mr-3  alert alert-warning" role="alert">
+                             Mes dix dernières opérations
+                     </div>
+                    <br>
+                    <div  ng-model="val" class="ml-3 mr-3  alert alert-warning" role="alert">
+                            {{val}}
+                     </div>
+                    <br>
+                     <div  ng-repeat="p in hist()" class="ml-3 mr-3 alert alert-dark" role="alert">
+                             {{p.op1+" "+p.op+" "+p.op2+"="+p.res}}
+                     </div>
                 </form>
+                    
             </div>
            
         </div>
